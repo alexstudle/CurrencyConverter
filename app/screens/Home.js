@@ -21,14 +21,16 @@ class Home extends Component {
   };
 
   handleBasePress = () => {
-    this.props.navigation.navigate('CurrencyList');
+    this.props.navigation.navigate('CurrencyList', { title: 'Base Currency' });
   };
   handleQuotePress = () => {
-    this.props.navigation.navigate('CurrencyList');
+    this.props.navigation.navigate('CurrencyList', { title: 'Quote Currency' });
   };
   handleTextChange = (text) => {};
   handleReverseButtonClick = () => {};
-  handleOptionsPress = () => {};
+  handleOptionsPress = () => {
+    this.props.navigation.navigate('Options', { title: 'Options' });
+  };
 
   render() {
     return (
